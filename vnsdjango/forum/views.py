@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Forum
 from .forms import ForumForm
-from django.views.generic import DetailView, UpdateView, DeleteView
+from django.views.generic import DetailView
 
 
 def forum_home(request):
@@ -13,19 +13,6 @@ class ForumDetailView(DetailView):
     model = Forum
     template_name = 'forum/details_view.html'
     context_object_name = 'post'
-
-
-class ForumUpdateView(UpdateView):
-    model = Forum
-    template_name = 'forum/create.html'
-    #fields = ['title', 'anons', 'full_text', 'date']
-    form_class = ForumForm
-
-
-class ForumDeleteView(DeleteView):
-    model = Forum
-    template_name = 'forum/forum_delete.html'
-    success_url = '/forum/'
 
 
 def create(request):
