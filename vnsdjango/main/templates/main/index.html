@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        {% filter upper %}
+            <p>A lot of different text in tag 'p'</p>
+        {% endfilter %}
+        <button class="btn btn-warning">going to other side!</button>
+
+        {% for value in values %}
+            {% if value != "Hello" %}
+                {% filter upper %}
+                    <p>{{value}}</p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor %}
+
+        {% for key in obj %}
+            <p>{{key|upper}}</p>
+        {% endfor %}
+
+        <!--obj.car-->
+    </div>
+{% endblock %}

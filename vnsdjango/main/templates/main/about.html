@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>About Us</h1>
+        {% filter upper %}
+            <p>A lot of different text in tag 'p'</p>
+        {% endfilter %}
+        <button class="btn btn-danger">press me</button>
+
+
+    </div>
+{% endblock %}

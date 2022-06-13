@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Forum{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Forum</h1>
+        {% filter upper %}
+            <p>A lot of different text in tag 'p'</p>
+        {% endfilter %}
+        <button class="btn btn-warning">going to other side!</button>
+
+        {% if forum %}
+            {% for post in forum %}
+                <div class="alert alert-warning">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.anons}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p> No posts </p>
+        {% endif %}
+
+        {# comments #}
+    </div>
+
+{% endblock %}

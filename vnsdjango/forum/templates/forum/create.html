@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Forum{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Add post form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Add post</button>
+            <!--
+            <input type="text" placeholder="Name of the post" class="form-control"><br>
+            <input type="text" placeholder="Anons post" class="form-control"><br>
+            <textarea class="form-control" placeholder="Text of the post"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br>
+            <button class="btn btn-success" type="submit">Add post</button>
+            -->
+        </form>
+    <p>lol</p>
+    </div>
+
+{% endblock %}
