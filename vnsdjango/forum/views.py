@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import Forum
 from .forms import ForumForm
-# Create your views here.
+from django.views.generic import DetailView
 
 
 def forum_home(request):
     forum = Forum.objects.order_by('-date')
     return render(request, 'forum/forum_home.html', {'forum': forum})
+
+
+class ForumDetailView(DetailView):
+    model = Forum
+    template_name = 'forum/details_view.html'
+    context_object_name = 'post'
 
 
 def create(request):

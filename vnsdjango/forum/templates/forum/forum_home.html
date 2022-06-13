@@ -15,6 +15,7 @@
                 <div class="alert alert-warning">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.anons}}</p>
+                    <a href="{% url 'forum_detail' post.id %}" class="btn btn-warning">Details</a>
                 </div>
             {% endfor %}
         {% else %}
