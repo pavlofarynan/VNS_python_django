@@ -101,3 +101,7 @@ main .features_register form p{
 main .features_register h1{
     margin-left: 5%;
 }
+
+#header_username {
+    color: #fff;
+}
