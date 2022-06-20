@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+    <div class="features_register">
+        <h1>Registration</h1>
+        {% if messages %}
+
+        {% for message in messages %}
+            <div role="alert" class="alert alert-danger">
+                message: {{message}}
+            </div>
+        {% endfor %}
+
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}<br>
+
+            <button class="btn btn-danger" type="submit">Sign up</button>
+        </form>
+
+    </div>
+
+{% endblock %}

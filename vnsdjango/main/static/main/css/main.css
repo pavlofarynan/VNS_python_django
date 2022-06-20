@@ -74,3 +74,30 @@ form {
     width: 500px;
     margin-top: 50px;
 }
+
+login, signup {
+    float: right;
+    text-align: right;
+    text-decoration: none;
+}
+
+main .features_register{
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    width: 70%;
+}
+
+main .features_register form {
+    margin-left: 5%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+main .features_register form p{
+    margin-top: 30px;
+}
+
+main .features_register h1{
+    margin-left: 5%;
+}

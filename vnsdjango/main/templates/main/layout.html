@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
+    <header>
+        <a href="{% url 'registration' %}" class="signup"><i class="fas fa-pen"></i>Sign Up</a>
+        <a href="{% url 'login' %}" class="login">Log In</a>
+    </header>
+
     <aside>
         <img src="{% static 'main/img/nikelogo.png'%}" alt="logo">
         <span class="logo">DoEpashka</span>
